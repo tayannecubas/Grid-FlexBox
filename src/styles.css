@@ -1,0 +1,65 @@
+body, ul, li, p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: Arial;
+}
+
+a{
+  color: rgb(56, 7, 7);
+  text-decoration: none;
+}
+
+.header{
+  display: flex; /*configura os itens um ao lado do outro*/
+  justify-content: space-between; /*configura uma distância entre os itens*/
+  padding: 20px;
+  align-items: center; /*Alinhar os itens ao centro, para não ficar desproporcinar ao usar uma imagem*/
+  flex-wrap: wrap; /*Quando a tela for pequena e um ficar perto do outro, o menu irá para baixo.*/
+  background: #1d1e20;
+}
+
+.menu{
+  display: flex;
+}
+
+.menu li{
+  margin-left: 10px;
+}
+
+/*Aumentar a área do clique para quando estiver usando mobile*/
+.menu li a {
+  display: block;
+  padding: 10px;
+  /*background: tomato;*/
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/*Configura para que as imagens fiquem responsivas ao no máximo 100% o tamanho do container*/
+img{
+  max-width: 100%;
+  display: block;
+}
+
+/* CSS FLEXBOX 1 */
+.flex{
+  display: flex;
+  flex-wrap: wrap; /*faça isso após a configuração do flex > div */
+  max-width: 800px; /*determinando o tamanho máximo do container*/
+  margin: 0 auto; /*ao passar dos 800, irá alinhar ao centro.*/
+}
+
+/*configuração mínima para todos os itens
+flex 1 - se expanda
+flex 1 1 - pode ficar menor, flex "shrink".
+flex 1 1 200px - significa que sempre terá esta base de 200px, se não conseguir ter 200px, irá quebrar.
+*/
+.flex > div{ /*falando direto com a div*/
+  flex: 1 1 200px;
+  margin: 10px;
+}
